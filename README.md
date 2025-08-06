@@ -68,8 +68,10 @@ npx @logistically/i18n-cli --help
 
 ### 1. Extract Translation Keys
 
+The CLI automatically detects translatable text using built-in patterns - no configuration needed!
+
 ```bash
-# Extract from current directory
+# Extract from current directory (finds hardcoded strings automatically)
 i18n extract
 
 # Extract from specific directory
@@ -124,6 +126,36 @@ export class UserService {
   }
 }
 ```
+
+## 🔍 Built-in Extraction Patterns
+
+The CLI comes with comprehensive built-in patterns that automatically detect translatable text in your codebase:
+
+### Supported Patterns
+
+- **Exception Messages**: `throw new Error("User not found")`
+- **Service Messages**: `this.translationService.translate("USER.CREATED")`
+- **Decorator Messages**: `@T("USER.VALIDATION.REQUIRED")`
+- **String Literals**: `"User profile updated successfully"`
+- **Template Literals**: `` `Welcome ${user.name}!` ``
+- **Concatenated Strings**: `"User " + userId + " not found"`
+- **Message Properties**: `message: "User created successfully"`
+- **BadRequestException**: `throw new BadRequestException("Invalid input")`
+- **ForbiddenException**: `throw new ForbiddenException("Access denied")`
+- **NotFoundException**: `throw new NotFoundException("Resource not found")`
+- **UnauthorizedException**: `throw new UnauthorizedException("Authentication required")`
+
+### Automatic Detection
+
+The CLI automatically scans your TypeScript/JavaScript files and extracts:
+- Hardcoded error messages
+- User-facing strings
+- Validation messages
+- Success/error notifications
+- Service method messages
+- Exception descriptions
+
+No configuration needed - just run `i18n extract` and it will find translatable content automatically!
 
 ## 📋 Commands
 

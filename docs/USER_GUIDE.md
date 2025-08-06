@@ -96,6 +96,66 @@ i18n extract --validate --verbose
 i18n extract --max-file-size 10 --concurrency 8
 ```
 
+### 🔍 Built-in Extraction Patterns
+
+The CLI comes with comprehensive built-in patterns that automatically detect translatable text in your codebase. No configuration is needed - the CLI will find translatable content automatically!
+
+#### Supported Patterns
+
+| Pattern Type | Example | Description |
+|--------------|---------|-------------|
+| **Exception Messages** | `throw new Error("User not found")` | Error messages in exceptions |
+| **Service Messages** | `this.translationService.translate("USER.CREATED")` | Translation service calls |
+| **Decorator Messages** | `@T("USER.VALIDATION.REQUIRED")` | Translation decorators |
+| **String Literals** | `"User profile updated successfully"` | Hardcoded user-facing strings |
+| **Template Literals** | `` `Welcome ${user.name}!` `` | Template strings with variables |
+| **Concatenated Strings** | `"User " + userId + " not found"` | String concatenation |
+| **Message Properties** | `message: "User created successfully"` | Object properties with messages |
+| **BadRequestException** | `throw new BadRequestException("Invalid input")` | NestJS exception messages |
+| **ForbiddenException** | `throw new ForbiddenException("Access denied")` | NestJS exception messages |
+| **NotFoundException** | `throw new NotFoundException("Resource not found")` | NestJS exception messages |
+| **UnauthorizedException** | `throw new UnauthorizedException("Authentication required")` | NestJS exception messages |
+
+#### What Gets Extracted
+
+The CLI automatically detects and extracts:
+
+- **Error Messages**: Exception descriptions and error notifications
+- **User Messages**: Success messages, notifications, and user feedback
+- **Validation Messages**: Form validation errors and field requirements
+- **Service Messages**: Business logic messages and service responses
+- **UI Text**: User interface strings and labels
+- **API Responses**: Response messages and status descriptions
+
+#### Example Extraction
+
+```typescript
+// This code will automatically extract these strings:
+export class UserService {
+  async createUser(userData: CreateUserDto) {
+    if (await this.userRepository.exists(userData.email)) {
+      throw new BadRequestException("User already exists"); // ✅ Extracted
+    }
+    
+    const user = await this.userRepository.create(userData);
+    return { message: "User created successfully" }; // ✅ Extracted
+  }
+  
+  async findUser(id: string) {
+    const user = await this.userRepository.findById(id);
+    if (!user) {
+      throw new NotFoundException(`User ${id} not found`); // ✅ Extracted
+    }
+    return user;
+  }
+}
+```
+
+Running `i18n extract` on this code will automatically find and extract:
+- `"User already exists"`
+- `"User created successfully"`
+- `"User ${id} not found"`
+
 ### Generate Command
 
 The `generate` command creates translation files for different languages and services based on extracted keys.
