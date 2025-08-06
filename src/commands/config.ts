@@ -4,7 +4,7 @@ import { Command } from 'commander';
 import { ConfigManager } from '../utils/config';
 import { Logger } from '../utils/logger';
 import { Validator } from '../utils/validator';
-import { SecurityContext } from '../types';
+import { SecurityContext, CLIConfig } from '../types';
 
 const logger = Logger.getInstance();
 
@@ -92,7 +92,33 @@ export async function setConfigValue(key: string, value: string): Promise<void> 
 
 export async function resetConfig(): Promise<void> {
   const configManager = ConfigManager.getInstance();
-  const defaultConfig = configManager.loadDefaultConfig();
+  
+  // Create default configuration
+  const defaultConfig: CLIConfig = {
+    version: '1.0.0',
+    environment: 'development',
+    logging: {
+      level: 'info',
+      format: 'text',
+      output: 'console',
+    },
+    performance: {
+      maxConcurrency: 4,
+      maxFileSize: 10,
+      timeout: 300,
+    },
+    security: {
+      validateInputs: true,
+      sanitizeOutputs: true,
+      maxKeyLength: 200,
+    },
+    features: {
+      enableValidation: true,
+      enableBackup: true,
+      enableDryRun: true,
+      enableProgressBar: true,
+    },
+  };
   
   await configManager.saveConfig(defaultConfig);
   logger.success('Configuration reset to defaults');
