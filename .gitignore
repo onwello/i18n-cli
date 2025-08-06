@@ -1,0 +1,914 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# CLI specific
+dist/
+build/
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# Test files
+test-results/
+test-output/
+*.test.js
+*.spec.js
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Translation files (optional - uncomment if you don't want to track generated translations)
+# src/translations/
+# translations/
+
+# CLI output files
+translation-keys.json
+translation-keys-*.json
+*.translation.json
+
+# Backup files
+*.backup
+*.bak
+*.orig
+
+# Performance files
+*.cpuprofile
+*.heapsnapshot
+
+# Security files
+.npmrc
+.yarnrc
+.env.local
+.env.production
+
+# Debug files
+.debug/
+debug.log
+
+# Cache directories
+.cache/
+cache/
+
+# Build artifacts
+lib/
+es/
+umd/
+cjs/
+
+# TypeScript
+*.tsbuildinfo
+
+# Jest
+coverage/
+.nyc_output/
+
+# ESLint
+.eslintcache
+
+# Prettier
+.prettierignore
+
+# Editor config
+.editorconfig
+
+# Git hooks
+.git/hooks/
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Kubernetes
+*.kubeconfig
+
+# Local development
+.local/
+local/
+
+# Documentation build
+docs/_build/
+docs/.doctrees/
+
+# Sphinx
+docs/_build/
+
+# Jekyll
+_site/
+.sass-cache/
+
+# Hugo
+public/
+
+# Docusaurus
+website/build/
+website/node_modules/
+
+# Storybook
+storybook-static/
+
+# Chromatic
+chromatic.log
+
+# Sentry
+.sentryclirc
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Serverless
+.serverless/
+
+# AWS
+.aws/
+
+# Google Cloud
+.gcloud/
+
+# Azure
+.azure/
+
+# Heroku
+.env.local
+.env.production
+
+# Railway
+.railway/
+
+# Fly.io
+fly.toml
+
+# Render
+.render/
+
+# Platform.sh
+.platform/
+
+# Pantheon
+.pantheon/
+
+# Acquia
+.acquia/
+
+# DDEV
+.ddev/
+
+# Lando
+.lando.yml
+
+# Docker Compose
+docker-compose.override.yml
+
+# Local SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Local logs
+logs/
+*.log
+
+# Local config
+config.local.js
+config.local.json
+config.local.yml
+config.local.yaml
+
+# Local secrets
+secrets/
+.secrets/
+*.secret
+
+# Local data
+data/
+.data/
+
+# Local uploads
+uploads/
+.uploads/
+
+# Local media
+media/
+.media/
+
+# Local assets
+assets/
+.assets/
+
+# Local backups
+backups/
+.backups/
+
+# Local exports
+exports/
+.exports/
+
+# Local imports
+imports/
+.imports/
+
+# Local reports
+reports/
+.reports/
+
+# Local analytics
+analytics/
+.analytics/
+
+# Local monitoring
+monitoring/
+.monitoring/
+
+# Local metrics
+metrics/
+.metrics/
+
+# Local profiling
+profiling/
+.profiling/
+
+# Local tracing
+tracing/
+.tracing/
+
+# Local debugging
+debugging/
+.debugging/
+
+# Local testing
+testing/
+.testing/
+
+# Local staging
+staging/
+.staging/
+
+# Local production
+production/
+.production/
+
+# Local development
+development/
+.development/
+
+# Local sandbox
+sandbox/
+.sandbox/
+
+# Local demo
+demo/
+.demo/
+
+# Local example
+example/
+.example/
+
+# Local sample
+sample/
+.sample/
+
+# Local template
+template/
+.template/
+
+# Local boilerplate
+boilerplate/
+.boilerplate/
+
+# Local scaffold
+scaffold/
+.scaffold/
+
+# Local generator
+generator/
+.generator/
+
+# Local builder
+builder/
+.builder/
+
+# Local compiler
+compiler/
+.compiler/
+
+# Local bundler
+bundler/
+.bundler/
+
+# Local packager
+packager/
+.packager/
+
+# Local installer
+installer/
+.installer/
+
+# Local updater
+updater/
+.updater/
+
+# Local migrator
+migrator/
+.migrator/
+
+# Local validator
+validator/
+.validator/
+
+# Local formatter
+formatter/
+.formatter/
+
+# Local linter
+linter/
+.linter/
+
+# Local tester
+tester/
+.tester/
+
+# Local runner
+runner/
+.runner/
+
+# Local executor
+executor/
+.executor/
+
+# Local processor
+processor/
+.processor/
+
+# Local transformer
+transformer/
+.transformer/
+
+# Local converter
+converter/
+.converter/
+
+# Local parser
+parser/
+.parser/
+
+# Local lexer
+lexer/
+.lexer/
+
+# Local tokenizer
+tokenizer/
+.tokenizer/
+
+# Local analyzer
+analyzer/
+.analyzer/
+
+# Local optimizer
+optimizer/
+.optimizer/
+
+# Local minifier
+minifier/
+.minifier/
+
+# Local compressor
+compressor/
+.compressor/
+
+# Local extractor
+extractor/
+.extractor/
+
+# Local generator
+generator/
+.generator/
+
+# Local replacer
+replacer/
+.replacer/
+
+# Local validator
+validator/
+.validator/
+
+# Local formatter
+formatter/
+.formatter/
+
+# Local linter
+linter/
+.linter/
+
+# Local tester
+tester/
+.tester/
+
+# Local runner
+runner/
+.runner/
+
+# Local executor
+executor/
+.executor/
+
+# Local processor
+processor/
+.processor/
+
+# Local transformer
+transformer/
+.transformer/
+
+# Local converter
+converter/
+.converter/
+
+# Local parser
+parser/
+.parser/
+
+# Local lexer
+lexer/
+.lexer/
+
+# Local tokenizer
+tokenizer/
+.tokenizer/
+
+# Local analyzer
+analyzer/
+.analyzer/
+
+# Local optimizer
+optimizer/
+.optimizer/
+
+# Local minifier
+minifier/
+.minifier/
+
+# Local compressor
+compressor/
+.compressor/
+
+# Local extractor
+extractor/
+.extractor/
+
+# Local generator
+generator/
+.generator/
+
+# Local replacer
+replacer/
+.replacer/
+
+# Local validator
+validator/
+.validator/
+
+# Local formatter
+formatter/
+.formatter/
+
+# Local linter
+linter/
+.linter/
+
+# Local tester
+tester/
+.tester/
+
+# Local runner
+runner/
+.runner/
+
+# Local executor
+executor/
+.executor/
+
+# Local processor
+processor/
+.processor/
+
+# Local transformer
+transformer/
+.transformer/
+
+# Local converter
+converter/
+.converter/
+
+# Local parser
+parser/
+.parser/
+
+# Local lexer
+lexer/
+.lexer/
+
+# Local tokenizer
+tokenizer/
+.tokenizer/
+
+# Local analyzer
+analyzer/
+.analyzer/
+
+# Local optimizer
+optimizer/
+.optimizer/
+
+# Local minifier
+minifier/
+.minifier/
+
+# Local compressor
+compressor/
+.compressor/
+
+# Local extractor
+extractor/
+.extractor/
+
+# Local generator
+generator/
+.generator/
+
+# Local replacer
+replacer/
+.replacer/
+
+# Local validator
+validator/
+.validator/
+
+# Local formatter
+formatter/
+.formatter/
+
+# Local linter
+linter/
+.linter/
+
+# Local tester
+tester/
+.tester/
+
+# Local runner
+runner/
+.runner/
+
+# Local executor
+executor/
+.executor/
+
+# Local processor
+processor/
+.processor/
+
+# Local transformer
+transformer/
+.transformer/
+
+# Local converter
+converter/
+.converter/
+
+# Local parser
+parser/
+.parser/
+
+# Local lexer
+lexer/
+.lexer/
+
+# Local tokenizer
+tokenizer/
+.tokenizer/
+
+# Local analyzer
+analyzer/
+.analyzer/
+
+# Local optimizer
+optimizer/
+.optimizer/
+
+# Local minifier
+minifier/
+.minifier/
+
+# Local compressor
+compressor/
+.compressor/
+
+# Local extractor
+extractor/
+.extractor/
+
+# Local generator
+generator/
+.generator/
+
+# Local replacer
+replacer/
+.replacer/
+
+# Local validator
+validator/
+.validator/
+
+# Local formatter
+formatter/
+.formatter/
+
+# Local linter
+linter/
+.linter/
+
+# Local tester
+tester/
+.tester/
+
+# Local runner
+runner/
+.runner/
+
+# Local executor
+executor/
+.executor/
+
+# Local processor
+processor/
+.processor/
+
+# Local transformer
+transformer/
+.transformer/
+
+# Local converter
+converter/
+.converter/
+
+# Local parser
+parser/
+.parser/
+
+# Local lexer
+lexer/
+.lexer/
+
+# Local tokenizer
+tokenizer/
+.tokenizer/
+
+# Local analyzer
+analyzer/
+.analyzer/
+
+# Local optimizer
+optimizer/
+.optimizer/
+
+# Local minifier
+minifier/
+.minifier/
+
+# Local compressor
+compressor/
+.compressor/
+
+# Local extractor
+extractor/
+.extractor/
+
+# Local generator
+generator/
+.generator/
+
+# Local replacer
+replacer/
+.replacer/
+
+# Local validator
+validator/
+.validator/
+
+# Local formatter
+formatter/
+.formatter/
+
+# Local linter
+linter/
+.linter/
+
+# Local tester
+tester/
+.tester/
+
+# Local runner
+runner/
+.runner/
+
+# Local executor
+executor/
+.executor/
+
+# Local processor
+processor/
+.processor/
+
+# Local transformer
+transformer/
+.transformer/
+
+# Local converter
+converter/
+.converter/
+
+# Local parser
+parser/
+.parser/
+
+# Local lexer
+lexer/
+.lexer/
+
+# Local tokenizer
+tokenizer/
+.tokenizer/
+
+# Local analyzer
+analyzer/
+.analyzer/
+
+# Local optimizer
+optimizer/
+.optimizer/
+
+# Local minifier
+minifier/
+.minifier/
+
+# Local compressor
+compressor/
+.compressor/
