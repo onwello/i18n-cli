@@ -131,6 +131,20 @@ The CLI automatically detects and extracts:
 - **Object Properties**: Message properties in objects and return values
 - **Error Arrays**: Validation errors and error collections
 
+#### What's NOT Extracted
+
+The CLI intelligently excludes non-user-facing content to focus on translatable strings:
+
+| Excluded Content | Examples | Reason |
+|------------------|----------|---------|
+| **Log Messages** | `console.log("Debug info")`, `logger.info("Internal message")` | Not user-facing |
+| **API Documentation** | JSDoc comments, Swagger descriptions | Documentation, not UI text |
+| **Code Comments** | `// TODO:`, `/* Implementation notes */` | Developer notes |
+| **Configuration Values** | Environment variables, config keys | Technical configuration |
+| **Technical Strings** | File paths, URLs, technical identifiers | System-level content |
+| **Test Data** | Mock data, test fixtures | Testing content |
+| **Other Decorators** | `@Injectable()`, `@Controller()`, `@Get()` | Non-translation decorators |
+
 #### Example Extraction
 
 ```typescript
@@ -182,6 +196,45 @@ Running `i18n extract` on this code will automatically find and extract:
 - `"Password is required"`
 - `"User not found"`
 - `"User updated successfully"`
+
+#### Example: What Gets Extracted vs Excluded
+
+```typescript
+export class UserService {
+  // ❌ NOT extracted - Log message
+  console.log("Processing user creation request");
+  
+  // ❌ NOT extracted - Code comment
+  // TODO: Add validation for email format
+  
+  // ❌ NOT extracted - API documentation
+  /**
+   * Creates a new user
+   * @param userData - User creation data
+   */
+  
+  // ❌ NOT extracted - Technical decorator
+  @Injectable()
+  async createUser(userData: CreateUserDto) {
+    // ❌ NOT extracted - Internal log
+    this.logger.debug("Validating user data");
+    
+    // ✅ EXTRACTED - User-facing error
+    if (await this.userRepository.exists(userData.email)) {
+      throw new BadRequestException("User already exists");
+    }
+    
+    // ✅ EXTRACTED - Success message
+    const user = await this.userRepository.create(userData);
+    return { message: "User created successfully" };
+  }
+  
+  // ❌ NOT extracted - Test data
+  private mockUsers = [
+    { id: 1, name: "Test User" } // Not extracted
+  ];
+}
+```
 
 ### Generate Command
 

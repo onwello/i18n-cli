@@ -161,6 +161,17 @@ The CLI automatically scans your TypeScript/JavaScript files and extracts:
 
 No configuration needed - just run `i18n extract` and it will find translatable content automatically!
 
+### What's NOT Extracted
+
+The CLI intelligently excludes non-user-facing content:
+- **Log messages**: `console.log("Debug info")`, `logger.info("Internal message")`
+- **API documentation**: JSDoc comments, Swagger descriptions
+- **Code comments**: `// TODO:`, `/* Implementation notes */`
+- **Configuration values**: Environment variables, config keys
+- **Technical strings**: File paths, URLs, technical identifiers
+- **Test data**: Mock data, test fixtures
+- **Other decorators**: Non-translation decorators like `@Injectable()`, `@Controller()`
+
 ## 📋 Commands
 
 ### Extract Command
