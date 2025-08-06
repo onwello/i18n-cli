@@ -1,0 +1,49 @@
+{
+  "index": {
+    "title": "Home",
+    "type": "page"
+  },
+  "quick-start": {
+    "title": "Quick Start",
+    "type": "page"
+  },
+  "features": {
+    "title": "Features",
+    "type": "page"
+  },
+  "docs": {
+    "title": "Documentation",
+    "type": "menu",
+    "items": {
+      "user-guide": {
+        "title": "User Guide",
+        "href": "/docs/user-guide"
+      },
+      "api-reference": {
+        "title": "API Reference",
+        "href": "/docs/api-reference"
+      },
+      "integration-guide": {
+        "title": "Integration Guide",
+        "href": "/docs/integration-guide"
+      },
+      "configuration": {
+        "title": "Configuration",
+        "href": "/docs/configuration"
+      },
+      "performance": {
+        "title": "Performance",
+        "href": "/docs/performance"
+      },
+      "troubleshooting": {
+        "title": "Troubleshooting",
+        "href": "/docs/troubleshooting"
+      }
+    }
+  },
+  "github": {
+    "title": "GitHub",
+    "href": "https://github.com/logistically/i18n-cli",
+    "newWindow": true
+  }
+} 
