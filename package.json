@@ -4,10 +4,7 @@
   "description": "Enterprise-grade CLI tool for extracting and managing translations in Logistically microservices",
   "main": "dist/index.js",
   "bin": {
-    "translation-extract": "./dist/extract.js",
-    "translation-generate": "./dist/generate.js",
-    "translation-replace": "./dist/replace.js",
-    "translation": "./dist/cli.js"
+    "i18n": "dist/cli.js"
   },
   "scripts": {
     "build": "tsc",
@@ -66,7 +63,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/logistically/i18n-cli.git"
+    "url": "git+https://github.com/logistically/i18n-cli.git"
   },
   "bugs": {
     "url": "https://github.com/logistically/i18n-cli/issues"
