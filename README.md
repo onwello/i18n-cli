@@ -139,7 +139,9 @@ The CLI comes with comprehensive built-in patterns that automatically detect tra
 - **String Literals**: `"User profile updated successfully"`
 - **Template Literals**: `` `Welcome ${user.name}!` ``
 - **Concatenated Strings**: `"User " + userId + " not found"`
-- **Message Properties**: `message: "User created successfully"`
+- **Object Properties**: `message: "User created successfully"`
+- **Return Objects**: `return { message: "Operation successful" }`
+- **Error Arrays**: `errors.push(\`Validation failed\`)`
 - **BadRequestException**: `throw new BadRequestException("Invalid input")`
 - **ForbiddenException**: `throw new ForbiddenException("Access denied")`
 - **NotFoundException**: `throw new NotFoundException("Resource not found")`
@@ -154,6 +156,8 @@ The CLI automatically scans your TypeScript/JavaScript files and extracts:
 - Success/error notifications
 - Service method messages
 - Exception descriptions
+- Object properties and return values
+- Error arrays and validation messages
 
 No configuration needed - just run `i18n extract` and it will find translatable content automatically!
 

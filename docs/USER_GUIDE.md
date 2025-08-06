@@ -110,7 +110,9 @@ The CLI comes with comprehensive built-in patterns that automatically detect tra
 | **String Literals** | `"User profile updated successfully"` | Hardcoded user-facing strings |
 | **Template Literals** | `` `Welcome ${user.name}!` `` | Template strings with variables |
 | **Concatenated Strings** | `"User " + userId + " not found"` | String concatenation |
-| **Message Properties** | `message: "User created successfully"` | Object properties with messages |
+| **Object Properties** | `message: "User created successfully"` | Object properties with messages |
+| **Return Objects** | `return { message: "Operation successful" }` | Return statements with messages |
+| **Error Arrays** | `errors.push(\`Validation failed\`)` | Template literals in error arrays |
 | **BadRequestException** | `throw new BadRequestException("Invalid input")` | NestJS exception messages |
 | **ForbiddenException** | `throw new ForbiddenException("Access denied")` | NestJS exception messages |
 | **NotFoundException** | `throw new NotFoundException("Resource not found")` | NestJS exception messages |
@@ -126,6 +128,8 @@ The CLI automatically detects and extracts:
 - **Service Messages**: Business logic messages and service responses
 - **UI Text**: User interface strings and labels
 - **API Responses**: Response messages and status descriptions
+- **Object Properties**: Message properties in objects and return values
+- **Error Arrays**: Validation errors and error collections
 
 #### Example Extraction
 
@@ -148,6 +152,25 @@ export class UserService {
     }
     return user;
   }
+  
+  async validateUser(userData: CreateUserDto) {
+    const errors = [];
+    if (!userData.email) {
+      errors.push(`Email is required`); // ✅ Extracted
+    }
+    if (!userData.password) {
+      errors.push(`Password is required`); // ✅ Extracted
+    }
+    return { valid: errors.length === 0, errors };
+  }
+  
+  async updateUser(id: string, data: UpdateUserDto) {
+    const user = await this.userRepository.findById(id);
+    if (!user) {
+      return { success: false, message: "User not found" }; // ✅ Extracted
+    }
+    return { success: true, message: "User updated successfully" }; // ✅ Extracted
+  }
 }
 ```
 
@@ -155,6 +178,10 @@ Running `i18n extract` on this code will automatically find and extract:
 - `"User already exists"`
 - `"User created successfully"`
 - `"User ${id} not found"`
+- `"Email is required"`
+- `"Password is required"`
+- `"User not found"`
+- `"User updated successfully"`
 
 ### Generate Command
 
