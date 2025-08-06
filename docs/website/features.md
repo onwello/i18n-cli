@@ -1,16 +1,16 @@
 ---
 title: "Features"
-description: "Comprehensive features of @logistically/i18n-cli"
+description: "Comprehensive features of @logistically/i18n CLI tool and runtime library"
 sidebar_position: 2
 ---
 
 # Features
 
-**@logistically/i18n-cli** provides comprehensive i18n management capabilities with enterprise-grade features designed specifically for NestJS microservices.
+**@logistically/i18n** provides a complete internationalization solution for NestJS microservices, combining a powerful CLI tool for extraction and generation with a robust runtime library for seamless integration.
 
-## 🔍 Comprehensive Extraction
+## 🛠️ CLI Tool Features
 
-### Built-in Patterns
+### 🔍 Comprehensive Extraction
 
 The CLI automatically detects and extracts translatable text using 12+ comprehensive patterns:
 
@@ -25,209 +25,81 @@ The CLI automatically detects and extracts translatable text using 12+ comprehen
 - **Error Arrays**: `errors.push(\`Validation failed\`)`
 - **NestJS Exceptions**: All built-in exception types
 
-### Intelligent Filtering
+### 🛡️ Enterprise Security
 
-The CLI intelligently excludes non-user-facing content:
+- **Input Validation**: Path traversal prevention, file type validation
+- **Output Sanitization**: HTML/script tag removal, XSS protection
+- **Security Monitoring**: Real-time security alerts, audit logging
+- **Configuration Validation**: Comprehensive security checks
 
-- **Log messages**: `console.log("Debug info")`
-- **API documentation**: JSDoc comments, Swagger descriptions
-- **Code comments**: `// TODO:`, `/* Implementation notes */`
-- **Configuration values**: Environment variables, config keys
-- **Technical strings**: File paths, URLs, technical identifiers
-- **Test data**: Mock data, test fixtures
-- **Other decorators**: Non-translation decorators like `@Injectable()`
+### ⚡ Performance Optimization
 
-## 🛡️ Enterprise Security
-
-### Input Validation
-- Path traversal prevention
-- File type validation
-- Size limit enforcement
-- Suspicious content detection
-
-### Output Sanitization
-- HTML/script tag removal
-- JavaScript injection prevention
-- XSS protection
-- Dangerous protocol filtering
-
-### Security Monitoring
-- Real-time security alerts
-- Suspicious activity detection
-- Audit logging
-- Configuration validation
-
-## ⚡ Performance Optimization
-
-### Concurrent Processing
-- Parallel file processing
-- Configurable concurrency limits
-- Memory-efficient operations
-- Progress tracking
-
-### File Size Management
-- Configurable file size limits
-- Large file handling
-- Memory usage optimization
-- Performance monitoring
-
-### Real-time Monitoring
-- Execution time tracking
-- Memory usage monitoring
-- CPU utilization
-- Progress bars
-
-## 🔧 Advanced Configuration
-
-### Environment-based Settings
-```bash
-# Environment variables
-NODE_ENV=production
-LOG_LEVEL=warn
-MAX_CONCURRENCY=8
-VALIDATE_INPUTS=true
-```
-
-### Configuration Files
-```json
-{
-  "version": "1.0.1",
-  "environment": "production",
-  "logging": {
-    "level": "warn",
-    "format": "json",
-    "output": "both"
-  },
-  "performance": {
-    "maxConcurrency": 8,
-    "maxFileSize": 50,
-    "timeout": 600
-  },
-  "security": {
-    "validateInputs": true,
-    "sanitizeOutputs": true,
-    "maxKeyLength": 200
-  }
-}
-```
-
-### Command-line Overrides
-```bash
-i18n extract --max-file-size 100 --concurrency 16 --validate
-```
-
-## 📊 Comprehensive Logging
-
-### Multiple Output Formats
-- **Text**: Human-readable console output
-- **JSON**: Structured logging for automation
-- **File**: Persistent log storage
-- **Both**: Console and file output
-
-### Log Levels
-- **Debug**: Detailed debugging information
-- **Info**: General information messages
-- **Warn**: Warning messages
-- **Error**: Error messages
-
-### Structured Logging
-```json
-{
-  "timestamp": "2024-01-15T10:30:00Z",
-  "level": "info",
-  "message": "Extraction completed",
-  "context": "extraction",
-  "metadata": {
-    "filesProcessed": 150,
-    "keysExtracted": 45,
-    "duration": 2.3
-  }
-}
-```
-
-## 🔍 Validation & Error Handling
-
-### Comprehensive Validation
-- Input path validation
-- File existence checks
-- Configuration validation
-- Translation key validation
-
-### Error Recovery
-- Graceful error handling
-- Partial success reporting
-- Rollback capabilities
-- Error categorization
-
-### Warning System
-- Non-critical issues
-- Performance warnings
-- Security advisories
-- Best practice suggestions
-
-## 🏗️ NestJS Integration
-
-### Native Support
-- NestJS exception patterns
-- Service method extraction
-- Decorator recognition
-- Module structure awareness
-
-### Seamless Workflow
-```typescript
-// Extract translations
-i18n extract
-
-// Generate translation files
-i18n generate
-
-// Replace hardcoded strings
-i18n replace
-
-// Use in NestJS service
-import { TranslationService, T } from '@logistically/i18n';
-
-@Injectable()
-export class UserService {
-  constructor(private translationService: TranslationService) {}
-
-  async findUser(id: string) {
-    const user = await this.userRepository.findById(id);
-    if (!user) {
-      throw new T('USER.NOT_FOUND', { userId: id });
-    }
-    return user;
-  }
-}
-```
-
-## 📈 Production Ready
-
-### Enterprise Features
-- **Security**: Built-in security measures
-- **Performance**: Optimized for large codebases
-- **Reliability**: Comprehensive error handling
-- **Monitoring**: Real-time performance tracking
-- **Logging**: Structured logging system
-- **Configuration**: Flexible configuration management
-
-### Scalability
-- **Concurrent Processing**: Handle large codebases efficiently
-- **Memory Management**: Optimized memory usage
-- **File Size Limits**: Configurable file size handling
-- **Progress Tracking**: Real-time progress monitoring
+- **Concurrent Processing**: Parallel file processing with configurable limits
+- **File Size Management**: Configurable file size limits and memory optimization
+- **Real-time Monitoring**: Execution time tracking, progress bars
 - **Resource Monitoring**: CPU and memory usage tracking
 
-### Maintainability
-- **TypeScript**: Full TypeScript support
-- **Testing**: Comprehensive test coverage
-- **Documentation**: Complete API documentation
-- **Modular Design**: Clean, maintainable architecture
-- **Extensible**: Easy to extend and customize
+### 🔧 Advanced Configuration
 
-## 🎯 Zero Dependencies
+- **Environment-based Settings**: Flexible configuration via environment variables
+- **Configuration Files**: JSON-based configuration with validation
+- **Command-line Overrides**: Runtime configuration overrides
+- **Multiple Output Formats**: Text, JSON, file, and combined logging
 
-Unlike other i18n tools that require external APIs or translation services, our CLI provides complete control over your translation workflow:
+## 📚 Runtime Library Features
+
+### 🏗️ NestJS Integration
+
+- **Module Integration**: Easy setup with `TranslationModule.forRoot()`
+- **Service Injection**: `TranslationService` for dynamic translations
+- **Decorator Support**: `@T()` decorator for type-safe translations
+- **Exception Handling**: Translated exceptions with context
+
+### 🌐 Advanced Language Support
+
+- **RTL Support**: Right-to-left language support (Arabic, Hebrew, Persian)
+- **Multiple Locales**: Support for unlimited languages
+- **Locale Detection**: Automatic locale detection and fallback
+- **Text Direction**: Utilities for RTL/LTR text direction
+
+### ⚡ Performance Features
+
+- **Tree Shaking**: Only include used translations in bundle
+- **Caching**: Configurable caching with TTL
+- **Lazy Loading**: Load translations on demand
+- **Memory Optimization**: Efficient memory usage for large translation sets
+
+### 🎨 Developer Experience
+
+- **Type Safety**: Full TypeScript support with decorators
+- **IntelliSense**: Complete IDE support and autocomplete
+- **Error Handling**: Comprehensive error handling and recovery
+- **Debugging**: Built-in debugging utilities
+
+## 🏆 Complete Solution Advantages
+
+### Unified Workflow
+
+Unlike other i18n solutions that require separate tools, our solution provides:
+
+1. **Extract** with CLI: `i18n extract`
+2. **Generate** translation files: `i18n generate`
+3. **Replace** hardcoded strings: `i18n replace`
+4. **Use** in NestJS: `import { TranslationService, T } from '@logistically/i18n'`
+
+### Enterprise Ready
+
+Both tools are built for enterprise use:
+
+- **Security**: Built-in security measures and validation
+- **Performance**: Optimized for large codebases and high traffic
+- **Reliability**: Comprehensive error handling and recovery
+- **Monitoring**: Real-time performance tracking and logging
+- **Scalability**: Handle growing applications and teams
+
+### Zero Dependencies
+
+Unlike other i18n tools that require external APIs:
 
 - **No AI APIs**: No dependency on OpenAI or other AI services
 - **No Translation Services**: No dependency on Google Translate or similar
@@ -236,13 +108,69 @@ Unlike other i18n tools that require external APIs or translation services, our 
 - **Offline Capable**: Works entirely offline
 - **Privacy Focused**: No data sent to external services
 
+## 📊 Comparison with Other Solutions
+
+| Feature | @logistically/i18n | FormatJS | React-i18next | vue-i18n |
+|---------|-------------------|----------|---------------|----------|
+| **Complete Workflow** | ✅ CLI + Runtime | ❌ CLI only | ❌ Runtime only | ❌ Runtime only |
+| **NestJS Native** | ✅ Built for microservices | ❌ React-specific | ❌ React-specific | ❌ Vue-specific |
+| **Enterprise Features** | ✅ Security, validation, monitoring | ❌ Basic functionality | ❌ Basic functionality | ❌ Basic functionality |
+| **Extraction Patterns** | ✅ 12+ comprehensive patterns | ✅ Limited patterns | ❌ Manual extraction | ❌ Manual extraction |
+| **Production Ready** | ✅ Built for enterprise | ✅ Mature | ✅ Mature | ✅ Mature |
+| **Zero Dependencies** | ✅ No external APIs | ✅ | ✅ | ✅ |
+| **RTL Support** | ✅ Built-in | ✅ | ✅ | ✅ |
+| **Tree Shaking** | ✅ Optimized | ✅ | ❌ | ❌ |
+
+## 🎯 Use Cases
+
+### Microservices Architecture
+
+Perfect for NestJS microservices that need:
+- Consistent translation management across services
+- Automated extraction and generation
+- Type-safe translation usage
+- Performance optimization
+
+### Enterprise Applications
+
+Built for enterprise applications requiring:
+- Security and validation
+- Performance monitoring
+- Comprehensive logging
+- Scalable architecture
+
+### Multi-language Applications
+
+Ideal for applications supporting:
+- Multiple languages and locales
+- RTL languages (Arabic, Hebrew, Persian)
+- Dynamic language switching
+- Context-aware translations
+
+### Development Teams
+
+Great for teams that need:
+- Automated translation workflow
+- Type-safe development
+- Comprehensive documentation
+- Easy onboarding
+
 ## 🚀 Ready to Get Started?
 
-Install the CLI and start extracting translations in minutes:
+Install both tools and start building internationalized NestJS applications:
 
 ```bash
+# Install CLI tool
 npm install -g @logistically/i18n-cli
+
+# Install runtime library
+npm install @logistically/i18n
+
+# Extract translations
 i18n extract
+
+# Use in your NestJS service
+import { TranslationService, T } from '@logistically/i18n';
 ```
 
-Experience the most comprehensive i18n CLI for NestJS microservices! 🎉 
+Experience the most comprehensive i18n solution for NestJS microservices! 🎉 

@@ -11,26 +11,54 @@
     "title": "Features",
     "type": "page"
   },
-  "docs": {
-    "title": "Documentation",
+  "cli": {
+    "title": "CLI Tool",
     "type": "menu",
     "items": {
+      "quick-start": {
+        "title": "Quick Start",
+        "href": "/docs/cli/quick-start"
+      },
       "user-guide": {
         "title": "User Guide",
-        "href": "/docs/user-guide"
+        "href": "/docs/cli/user-guide"
       },
       "api-reference": {
         "title": "API Reference",
-        "href": "/docs/api-reference"
-      },
-      "integration-guide": {
-        "title": "Integration Guide",
-        "href": "/docs/integration-guide"
+        "href": "/docs/cli/api-reference"
       },
       "configuration": {
         "title": "Configuration",
-        "href": "/docs/configuration"
+        "href": "/docs/cli/configuration"
+      }
+    }
+  },
+  "runtime": {
+    "title": "Runtime Library",
+    "type": "menu",
+    "items": {
+      "quick-start": {
+        "title": "Quick Start",
+        "href": "/docs/runtime/quick-start"
       },
+      "integration-guide": {
+        "title": "Integration Guide",
+        "href": "/docs/runtime/integration-guide"
+      },
+      "api-reference": {
+        "title": "API Reference",
+        "href": "/docs/runtime/api-reference"
+      },
+      "configuration": {
+        "title": "Configuration",
+        "href": "/docs/runtime/configuration"
+      }
+    }
+  },
+  "docs": {
+    "title": "Shared Documentation",
+    "type": "menu",
+    "items": {
       "performance": {
         "title": "Performance",
         "href": "/docs/performance"

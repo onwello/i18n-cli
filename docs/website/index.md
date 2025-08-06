@@ -1,9 +1,9 @@
 ---
-title: "@logistically/i18n-cli - Enterprise-Grade i18n CLI for NestJS"
-description: "The most comprehensive i18n CLI for NestJS microservices. Built for scale, security, and performance."
+title: "@logistically/i18n - Complete i18n Solution for NestJS"
+description: "Enterprise-grade i18n CLI tool and runtime library for NestJS microservices. Extract, generate, and manage translations with built-in security and performance."
 hero:
-  title: "Enterprise-Grade i18n CLI"
-  subtitle: "The most comprehensive i18n CLI for NestJS microservices"
+  title: "Complete i18n Solution for NestJS"
+  subtitle: "CLI Tool + Runtime Library"
   description: "Extract, generate, and manage translations with enterprise-grade security, validation, and performance monitoring."
   cta:
     text: "Get Started"
@@ -13,48 +13,47 @@ hero:
     link: "https://github.com/logistically/i18n-cli"
 ---
 
-# The Most Comprehensive i18n CLI for NestJS Microservices
+# Complete i18n Solution for NestJS Microservices
 
-**@logistically/i18n-cli** is the only enterprise-grade internationalization CLI tool built specifically for NestJS microservices. Unlike other i18n tools that are React-specific or lack enterprise features, our CLI provides comprehensive extraction, generation, and management capabilities with built-in security, validation, and performance monitoring.
+**@logistically/i18n** provides a complete internationalization solution for NestJS microservices, combining a powerful CLI tool for extraction and generation with a robust runtime library for seamless integration.
 
-## 🚀 Why Choose @logistically/i18n-cli?
+## 🚀 Two Powerful Tools, One Complete Solution
 
-<div class="features-grid">
-  <div class="feature-card">
-    <h3>🔍 Comprehensive Extraction</h3>
-    <p>12+ built-in patterns automatically detect translatable text in your codebase - no configuration needed!</p>
+<div class="products-grid">
+  <div class="product-card">
+    <h3>🛠️ @logistically/i18n-cli</h3>
+    <p><strong>Enterprise-Grade CLI Tool</strong></p>
+    <ul>
+      <li>Extract translatable strings automatically</li>
+      <li>Generate translation files for multiple languages</li>
+      <li>Replace hardcoded strings with translation keys</li>
+      <li>Built-in security and performance monitoring</li>
+    </ul>
+    <div class="product-cta">
+      <a href="/docs/cli/quick-start" class="btn-primary">CLI Documentation</a>
+    </div>
   </div>
   
-  <div class="feature-card">
-    <h3>🛡️ Enterprise Security</h3>
-    <p>Built-in input validation, output sanitization, and security monitoring for production environments.</p>
-  </div>
-  
-  <div class="feature-card">
-    <h3>⚡ Performance Optimized</h3>
-    <p>Concurrent processing, file size filtering, and real-time progress tracking for large codebases.</p>
-  </div>
-  
-  <div class="feature-card">
-    <h3>🏗️ NestJS Native</h3>
-    <p>Designed specifically for NestJS microservices with seamless integration with @logistically/i18n.</p>
-  </div>
-  
-  <div class="feature-card">
-    <h3>🔧 Zero Dependencies</h3>
-    <p>No external APIs or translation services required - complete control over your translation workflow.</p>
-  </div>
-  
-  <div class="feature-card">
-    <h3>📊 Production Ready</h3>
-    <p>Comprehensive logging, error handling, and monitoring built for enterprise use.</p>
+  <div class="product-card">
+    <h3>📚 @logistically/i18n</h3>
+    <p><strong>Runtime i18n Library</strong></p>
+    <ul>
+      <li>Seamless NestJS integration</li>
+      <li>RTL support and tree shaking</li>
+      <li>Performance optimizations</li>
+      <li>Type-safe translation decorators</li>
+    </ul>
+    <div class="product-cta">
+      <a href="/docs/runtime/quick-start" class="btn-primary">Runtime Documentation</a>
+    </div>
   </div>
 </div>
 
-## 🎯 Quick Start
+## 🎯 Complete Workflow
 
+### 1. Extract with CLI
 ```bash
-# Install globally
+# Install CLI tool
 npm install -g @logistically/i18n-cli
 
 # Extract translatable strings (finds them automatically!)
@@ -63,22 +62,33 @@ i18n extract
 # Generate translation files
 i18n generate
 
-# Replace hardcoded strings with translation keys
+# Replace hardcoded strings
 i18n replace
 ```
 
-## 📊 Comparison with Other Tools
+### 2. Use with Runtime Library
+```typescript
+// Install runtime library
+npm install @logistically/i18n
 
-| Feature | @logistically/i18n-cli | FormatJS CLI | Lobe i18n | Tenado i18n |
-|---------|------------------------|--------------|-----------|-------------|
-| **Framework Support** | ✅ Any TS/JS + NestJS native | ❌ React-only | ❌ Generic | ❌ Chinese-focused |
-| **Enterprise Features** | ✅ Security, validation, monitoring | ❌ Basic extraction | ❌ AI-powered only | ❌ Basic |
-| **Extraction Patterns** | ✅ 12+ comprehensive patterns | ✅ Limited patterns | ❌ Basic | ✅ Chinese only |
-| **Production Ready** | ✅ Built for enterprise | ✅ Mature | ❌ Development | ❌ Basic |
-| **NestJS Integration** | ✅ Native support | ❌ No NestJS focus | ❌ No NestJS focus | ❌ No NestJS focus |
-| **No Dependencies** | ✅ No external APIs | ✅ | ❌ Requires AI API | ❌ Requires translation API |
+// Use in your NestJS service
+import { TranslationService, T } from '@logistically/i18n';
 
-## 🔍 What Gets Extracted Automatically
+@Injectable()
+export class UserService {
+  constructor(private translationService: TranslationService) {}
+
+  async findUser(id: string) {
+    const user = await this.userRepository.findById(id);
+    if (!user) {
+      throw new T('USER.NOT_FOUND', { userId: id });
+    }
+    return user;
+  }
+}
+```
+
+## 🔍 What the CLI Extracts Automatically
 
 The CLI intelligently detects and extracts:
 
@@ -92,32 +102,85 @@ The CLI intelligently detects and extracts:
 - **Error Arrays**: `errors.push(\`Validation failed\`)`
 - **NestJS Exceptions**: All built-in exception types
 
+## 🏗️ Runtime Library Features
+
+### NestJS Integration
+- **Module Integration**: Easy setup with `TranslationModule`
+- **Service Injection**: `TranslationService` for dynamic translations
+- **Decorator Support**: `@T()` decorator for type-safe translations
+- **Exception Handling**: Translated exceptions with context
+
+### Advanced Features
+- **RTL Support**: Right-to-left language support
+- **Tree Shaking**: Optimized bundle sizes
+- **Performance**: Caching and lazy loading
+- **Type Safety**: Full TypeScript support
+
+## 🏆 Why Choose @logistically/i18n?
+
+| Feature | Our Solution | Other Tools |
+|---------|--------------|-------------|
+| **Complete Workflow** | ✅ CLI + Runtime | ❌ Separate tools |
+| **NestJS Native** | ✅ Built for microservices | ❌ Generic solutions |
+| **Enterprise Features** | ✅ Security, validation, monitoring | ❌ Basic functionality |
+| **Extraction Patterns** | ✅ 12+ comprehensive patterns | ❌ Limited patterns |
+| **Production Ready** | ✅ Built for enterprise | ❌ Development tools |
+| **Zero Dependencies** | ✅ No external APIs required | ❌ AI/translation services |
+
 ## 🏢 Enterprise Features
 
+### CLI Tool
 - **Security**: Input validation, output sanitization, path security
 - **Performance**: Concurrent processing, file size filtering, progress tracking
 - **Validation**: Comprehensive error checking and warning systems
 - **Logging**: Structured logging with multiple output formats
 - **Monitoring**: Real-time performance metrics and resource usage
-- **Configuration**: Environment-based and command-line configurable settings
+
+### Runtime Library
+- **Type Safety**: Full TypeScript support with decorators
+- **Performance**: Optimized caching and lazy loading
+- **RTL Support**: Right-to-left language support
+- **Tree Shaking**: Minimal bundle impact
+- **Error Handling**: Translated exceptions with context
 
 ## 📚 Documentation
 
-- **[Quick Start Guide](/docs/quick-start)** - Get up and running in minutes
-- **[User Guide](/docs/user-guide)** - Complete usage instructions
-- **[API Reference](/docs/api-reference)** - Detailed API documentation
-- **[Integration Guide](/docs/integration-guide)** - NestJS integration examples
-- **[Configuration](/docs/configuration)** - Advanced configuration options
+### CLI Tool
+- **[CLI Quick Start](/docs/cli/quick-start)** - Get started with the CLI tool
+- **[CLI User Guide](/docs/cli/user-guide)** - Complete CLI usage instructions
+- **[CLI API Reference](/docs/cli/api-reference)** - CLI API documentation
+- **[CLI Configuration](/docs/cli/configuration)** - CLI configuration options
+
+### Runtime Library
+- **[Runtime Quick Start](/docs/runtime/quick-start)** - Get started with the runtime library
+- **[Runtime Integration Guide](/docs/runtime/integration-guide)** - NestJS integration examples
+- **[Runtime API Reference](/docs/runtime/api-reference)** - Runtime API documentation
+- **[Runtime Configuration](/docs/runtime/configuration)** - Runtime configuration options
+
+### Shared Documentation
 - **[Performance](/docs/performance)** - Optimization and monitoring
 - **[Troubleshooting](/docs/troubleshooting)** - Common issues and solutions
 
 ## 🎉 Get Started Today
 
-Ready to transform your i18n workflow? Install the CLI and start extracting translations in minutes:
+### Install Both Tools
 
 ```bash
+# Install CLI tool
 npm install -g @logistically/i18n-cli
-i18n extract
+
+# Install runtime library
+npm install @logistically/i18n
 ```
 
-Join the growing community of developers using the most comprehensive i18n CLI for NestJS microservices! 🚀 
+### Start Extracting and Using Translations
+
+```bash
+# Extract translations
+i18n extract
+
+# Use in your NestJS service
+import { TranslationService, T } from '@logistically/i18n';
+```
+
+Join the growing community of developers using the most comprehensive i18n solution for NestJS microservices! 🚀 
