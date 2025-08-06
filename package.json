@@ -32,7 +32,17 @@
     "microservices",
     "nestjs",
     "typescript",
-    "logistically"
+    "logistically",
+    "enterprise",
+    "security",
+    "validation",
+    "performance",
+    "extraction",
+    "localization",
+    "translation-cli",
+    "i18n-cli",
+    "nestjs-i18n",
+    "microservices-i18n"
   ],
   "author": "Logistically Team",
   "license": "MIT",

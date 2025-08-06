@@ -66,9 +66,9 @@ npx @logistically/i18n-cli --help
 
 ## 🎯 Quick Start
 
-### 1. Extract Translation Keys
+**The most comprehensive i18n CLI for NestJS microservices** - automatically detects translatable text using built-in patterns - no configuration needed!
 
-The CLI automatically detects translatable text using built-in patterns - no configuration needed!
+### 1. Extract Translation Keys
 
 ```bash
 # Extract from current directory (finds hardcoded strings automatically)
@@ -160,6 +160,17 @@ The CLI automatically scans your TypeScript/JavaScript files and extracts:
 - Error arrays and validation messages
 
 No configuration needed - just run `i18n extract` and it will find translatable content automatically!
+
+## 🏆 Why Choose @logistically/i18n-cli?
+
+| Feature | Our CLI | Other Tools |
+|---------|----------|-------------|
+| **Framework Support** | ✅ Any TS/JS + NestJS native | ❌ React-only or generic |
+| **Enterprise Features** | ✅ Security, validation, monitoring | ❌ Basic extraction only |
+| **Extraction Patterns** | ✅ 12+ comprehensive patterns | ❌ Limited patterns |
+| **Production Ready** | ✅ Built for enterprise | ❌ Development tools |
+| **NestJS Integration** | ✅ Native support | ❌ No NestJS focus |
+| **No Dependencies** | ✅ No external APIs required | ❌ AI/translation services |
 
 ### What's NOT Extracted
 
@@ -597,4 +608,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Enterprise-Grade i18n CLI v1.0.0** - Built for scale, security, and performance. 🚀 
+**Enterprise-Grade i18n CLI v1.0.1** - The most comprehensive i18n CLI for NestJS microservices. Built for scale, security, and performance. 🚀 
