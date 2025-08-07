@@ -1,6 +1,6 @@
 {
   "name": "@logistically/i18n-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Enterprise-grade CLI tool for extracting and managing translations in Logistically microservices",
   "main": "dist/index.js",
   "bin": {
