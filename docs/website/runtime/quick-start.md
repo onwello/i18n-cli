@@ -270,7 +270,7 @@ export class UserService {
 ## 🆘 Need Help?
 
 - **[Troubleshooting](/docs/troubleshooting)** - Common issues and solutions
-- **[GitHub Issues](https://github.com/logistically/i18n/issues)** - Report bugs or request features
-- **[Discussions](https://github.com/logistically/i18n/discussions)** - Ask questions and share experiences
+- **[GitHub Issues](https://github.com/onwello/i18n/issues)** - Report bugs or request features
+- **[Discussions](https://github.com/onwello/i18n/discussions)** - Ask questions and share experiences
 
 Ready to add internationalization to your NestJS application? Start using the runtime library now! 🚀 

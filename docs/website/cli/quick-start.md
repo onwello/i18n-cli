@@ -150,7 +150,7 @@ export class UserService {
 ## 🆘 Need Help?
 
 - **[Troubleshooting](/docs/troubleshooting)** - Common issues and solutions
-- **[GitHub Issues](https://github.com/logistically/i18n-cli/issues)** - Report bugs or request features
-- **[Discussions](https://github.com/logistically/i18n-cli/discussions)** - Ask questions and share experiences
+- **[GitHub Issues](https://github.com/onwello/i18n-cli/issues)** - Report bugs or request features
+- **[Discussions](https://github.com/onwello/i18n-cli/discussions)** - Ask questions and share experiences
 
 Ready to transform your i18n workflow? Start extracting translations now! 🚀 

@@ -49,7 +49,7 @@ npm run build
 
 ```bash
 # Clone the repository
-git clone https://github.com/logistically/i18n-cli.git
+git clone https://github.com/onwello/i18n-cli.git
 cd i18n-cli
 
 # Create a new branch
@@ -550,9 +550,9 @@ npm run docs:deploy
 
 **Resources:**
 - **Documentation**: [Complete docs](./docs/)
-- **Issues**: [GitHub Issues](https://github.com/logistically/i18n-cli/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/logistically/i18n-cli/discussions)
-- **Wiki**: [Development Wiki](https://github.com/logistically/i18n-cli/wiki)
+- **Issues**: [GitHub Issues](https://github.com/onwello/i18n-cli/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/onwello/i18n-cli/discussions)
+- **Wiki**: [Development Wiki](https://github.com/onwello/i18n-cli/wiki)
 
 **Contact:**
 - **Email**: [dev@logistically.com](mailto:dev@logistically.com)

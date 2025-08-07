@@ -10,7 +10,7 @@ hero:
     link: "/docs/quick-start"
   secondary:
     text: "View on GitHub"
-    link: "https://github.com/logistically/i18n-cli"
+    link: "https://github.com/onwello/i18n-cli"
 ---
 
 # Complete i18n Solution for NestJS Microservices

@@ -676,4 +676,4 @@ i18n --version
 
 ---
 
-**Need help?** Check our [Troubleshooting Guide](./TROUBLESHOOTING.md) or [open an issue](https://github.com/logistically/i18n-cli/issues). 
+**Need help?** Check our [Troubleshooting Guide](./TROUBLESHOOTING.md) or [open an issue](https://github.com/onwello/i18n-cli/issues). 

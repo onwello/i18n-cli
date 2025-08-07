@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/%40logistically%2Fi18n-cli.svg)](https://badge.fury.io/js/%40logistically%2Fi18n-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://github.com/logistically/i18n-cli/workflows/Tests/badge.svg)](https://github.com/logistically/i18n-cli/actions)
+[![Tests](https://github.com/onwello/i18n-cli/workflows/Tests/badge.svg)](https://github.com/onwello/i18n-cli/actions)
 
 > Enterprise-grade CLI tool for extracting and managing translations in Logistically microservices
 
@@ -574,7 +574,7 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 
 ```bash
 # Clone the repository
-git clone https://github.com/logistically/i18n-cli.git
+git clone https://github.com/onwello/i18n-cli.git
 cd i18n-cli
 
 # Install dependencies
@@ -594,8 +594,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🆘 Support
 
 - **Documentation**: [docs.logistically.com/i18n-cli](https://docs.logistically.com/i18n-cli)
-- **Issues**: [GitHub Issues](https://github.com/logistically/i18n-cli/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/logistically/i18n-cli/discussions)
+- **Issues**: [GitHub Issues](https://github.com/onwello/i18n-cli/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/onwello/i18n-cli/discussions)
 - **Enterprise Support**: [enterprise@logistically.com](mailto:enterprise@logistically.com)
 
 ## 🙏 Acknowledgments
@@ -604,7 +604,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Powered by [TypeScript](https://www.typescriptlang.org/) for type safety
 - Tested with [Jest](https://jestjs.io/) for comprehensive testing
 - Styled with [Chalk](https://github.com/chalk/chalk) for beautiful output
-- Designed to work seamlessly with [@logistically/i18n](https://github.com/logistically/i18n)
+- Designed to work seamlessly with [@logistically/i18n](https://github.com/onwello/i18n)
 
 ---
 

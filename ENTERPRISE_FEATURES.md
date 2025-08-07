@@ -470,7 +470,7 @@ For enterprise support and custom features:
 
 - **Email**: enterprise@onwello.com
 - **Documentation**: https://docs.onwello.com/translation-cli
-- **Issues**: https://github.com/onwello/translation-cli/issues
+- **Issues**: https://github.com/onwello/i18n-cli/issues
 - **Enterprise**: https://onwello.com/enterprise
 
 ---

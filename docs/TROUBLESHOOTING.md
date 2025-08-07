@@ -528,8 +528,8 @@ i18n extract --security-diagnose
 ### Community Support
 
 **Get community help:**
-- **GitHub Issues**: [Report bugs](https://github.com/logistically/i18n-cli/issues)
-- **Discussions**: [Ask questions](https://github.com/logistically/i18n-cli/discussions)
+- **GitHub Issues**: [Report bugs](https://github.com/onwello/i18n-cli/issues)
+- **Discussions**: [Ask questions](https://github.com/onwello/i18n-cli/discussions)
 - **Documentation**: [Complete docs](https://docs.logistically.com/i18n-cli)
 
 ### Professional Support
